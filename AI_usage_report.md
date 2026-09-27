@@ -1,129 +1,47 @@
-# AI Usage Report
+**AI Usage Report**  
+ Course: SMD  
+ Assignment: 1  
+ Student Name: Aneeqa Wali  
+ Registration No.: 23i3090  
+ Date: 27-09-2026
 
-## 1. AI Tool Used
+**1\. AI Tool(s) Used**  
+ Claude
 
-ChatGPT was used as an AI-assisted development tool during the development of the StudentTrack React Native application.
+**2\. Purpose of AI Usage**
 
----
+* Reviewing my app against the assignment's rubric to check completeness  
+* Understanding React/React Native concepts (state, reusable components, conditional rendering)  
+* Refactoring code structure (splitting a single-file app into reusable components and a separate data file)  
+* Implementing an additional feature (sort by attendance) and a UI animation (pulsing "Low" attendance badge)  
+* Debugging a dependency error  
+* Drafting project documentation (README)
 
-## 2. Purpose of AI Usage
+**3\. Important Prompts Used**
 
-AI was used as a development assistant rather than as a replacement for understanding or testing the application.
+* "Read this assignment, is this solution correct?"  
+* "Add sorting and split the code into separate component files"  
+* "Now readme"  
+* \[Insert your actual prompt about the dependency error, e.g.\] "Here's a screenshot of my error — what caused it?"
 
-The main purposes were:
+**4\. AI-Generated Output**  
+ Claude reviewed my app against the assignment rubric and pointed out two gaps: everything was in one file, and I was missing an "advanced feature." It then refactored the code into StatCard.js, CourseCard.js, and data/courses.js, added a sort-by-attendance toggle, and added a pulsing animation on the low-attendance badge using React Native's Animated API. It also diagnosed a dependency error as a missing package entry and drafted a README covering the problem statement, features, setup steps, and project structure.
 
-- Brainstorming the application idea
-- Planning the application structure
-- Generating React Native code
-- Improving the user interface
-- Debugging code
-- Explaining React and JavaScript concepts
-- Improving documentation
+**5\. Changes Made by Me**  
+Added dependencies
 
----
+**6\. My Understanding**  
+ The dependency error happened because react-native-chart-kit needs react-native-svg as a peer dependency, and it wasn't listed in package.json. Adding it as a dependency and reinstalling fixed the error. In the refactor, useState tracks which screen is showing and holds the course list, search text, and sort order; Animated.Value with Animated.loop drives the pulsing badge by cycling its opacity between 1 and 0.4.
 
-## 3. Application Ideation
+**7\. Verification and Testing**  
+ Ran the app in Expo Go/emulator, confirmed the sort button cycles correctly, confirmed the Low badge pulses only for courses under 75% attendance, confirmed the form validation still rejects invalid attendance/marks, any bugs you found and how you fixed them.
 
-ChatGPT was used to brainstorm a meaningful student-focused application.
+**8\. Reflection**  
+Learned that have to add dependencies in the file 
 
-The final idea was StudentTrack, an application focused on:
+**Student Declaration**  
+ I confirm that I have used AI tools only as a development assistant and that I understand the code submitted as part of this assignment. I am able to explain and demonstrate the functionality of my application.
 
-- Course tracking
-- Attendance monitoring
-- Marks tracking
-- Academic statistics
-- Performance visualization
+Student Name: Aneeqa Wali  
+ Date: 27-09-2026
 
-The idea was selected because it addresses a common academic management problem for university students.
-
----
-
-## 4. Code Generation
-
-AI assistance was used to generate and improve parts of the React Native implementation.
-
-Examples include:
-
-- React state management
-- Course data structures
-- Course filtering
-- Form validation
-- Dynamic academic calculations
-- Reusable components
-- Conditional rendering
-- Dashboard charts
-- Styling and UI improvements
-
-The generated code was reviewed and adapted to match the assignment requirements.
-
----
-
-## 5. Debugging and Testing
-
-AI was also used to help identify and fix implementation issues during development.
-
-The application was tested in Expo Snack after making changes.
-
-Testing included:
-
-- Opening different application views
-- Searching for courses
-- Adding a new course
-- Testing invalid form input
-- Checking low-attendance warnings
-- Checking dynamic statistics
-- Checking dashboard charts
-- Checking empty search results
-
----
-
-## 6. Adaptation of AI Output
-
-The AI-generated suggestions were not used without review.
-
-Changes were made to keep the application:
-
-- Simple
-- Mobile-friendly
-- Relevant to the student problem
-- Consistent with the assignment requirements
-- Easy to explain during the viva
-
-Unnecessary features and navigation code were avoided.
-
----
-
-## 7. React and JavaScript Concepts Reviewed
-
-During development, the following concepts were used and reviewed:
-
-### React
-
-- Components
-- Props
-- State
-- Events
-- Conditional rendering
-- Data-driven UI
-
-### JavaScript
-
-- Arrays
-- Objects
-- Functions
-- `map()`
-- `filter()`
-- `reduce()`
-- Conditions
-- Data manipulation
-
----
-
-## 8. Example of AI-Assisted Decision Making
-
-One example was the implementation of the low-attendance warning.
-
-The application checks whether:
-
-```javascript
-course.attendance < 75
